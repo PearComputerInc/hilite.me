@@ -31,7 +31,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-        code = request.form.get('code', "print 'hello world!'")
+        code = request.form.get('code', "[print]^['Hello World!']")
         lexer = (
             request.form.get('lexer', '') or
             unquote(request.cookies.get('lexer', 'python')))
